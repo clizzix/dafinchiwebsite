@@ -57,14 +57,30 @@ h1, h2, h3, h4, h5 {
     text-decoration: none;
     color: var(--text-color);
     font-weight: bold;
-    border-right: 1px solid var(--text-color);
+    position: relative;
     padding: 15px;
+}
+
+.navbar ul li a::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 1px;
+    height: 0;
+    background-color: var(--text-color);
+    transition: height 0.3s ease-in-out;
 }
 
 .navbar ul li a:hover {
     color: var(--hover-color);
-    border-right: 1px solid var(--hover-color);
     font-size: 1.1rem;
+    transition: color 0.3s ease-in-out, font-size 0.3s ease-in-out;
+}
+
+.navbar ul li a:hover::after {
+    height: 100%;
+    background-color: var(--hover-color);
 }
 
 #about {
