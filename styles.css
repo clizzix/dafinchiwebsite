@@ -19,10 +19,11 @@ html {
     font-family: "Oxanium", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    color: var(--text-color);
 }
 
 body {
-    background-color: var(--bar-color);
+    background: linear-gradient(45deg, #9D3BEB,  #EB3BA5, #EB3B3C);
 }
 
 header {
@@ -96,7 +97,6 @@ h1, h2, h3, h4, h5 {
     padding: 50px;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(45deg, #9D3BEB,  #EB3BA5, #EB3B3C);
     z-index: -1;
 }
 
@@ -137,6 +137,7 @@ h1, h2, h3, h4, h5 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background: var(--bar-color);
 }
 
 .label-container {
@@ -157,7 +158,6 @@ h1, h2, h3, h4, h5 {
     
 }
 #media {
-    background: linear-gradient(45deg, #9D3BEB,  #EB3BA5, #EB3B3C);
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -165,7 +165,13 @@ h1, h2, h3, h4, h5 {
     align-items: center;
     padding: 20px;
 }
-
+.media-parent {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 20px;
+    text-align: center;
+}
 #media h2 {
     padding-bottom: 40px;
 }
@@ -204,16 +210,88 @@ audio {
     margin: 10px
 }
 
-#contact {
+.linktree {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap;
+    background: var(--bar-color);
+}
+
+.social-links {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
 }
-#contact img {
+.social-links img {
     padding: 10px;
 }
 
+.social-links a img:hover {
+    scale: 1.2;
+    transition: scale 0.3s ease-in-out;
+}
 .insta-button {
     filter: invert();
+}
+
+#contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: var(--bar-color);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px var(--text-color);
+    margin: 10px;
+    opacity: 80%;
+    flex-basis: 50%;
+}
+
+.contact-container {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.form {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form label {
+    padding-right: 10px;
+}
+
+.form-submit button {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    background: var(--button-color);
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.form-submit button:hover {
+    background: var(--buton-hover-color);
+    transition: background 0.3s ease-in-out;
+    cursor: pointer;
 }
