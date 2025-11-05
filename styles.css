@@ -156,3 +156,49 @@ h1, h2, h3, h4, h5 {
     object-fit: cover;
     
 }
+#media {
+    background: linear-gradient(45deg, #9D3BEB,  #EB3BA5, #EB3B3C);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#media h2 {
+    padding-bottom: 40px;
+}
+
+.media-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    background: var(--bar-color);
+    opacity: 90%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px var(--text-color);
+}
+
+.media-container img {
+    max-width: 125px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px var(--text-color);
+    margin: 10px;
+    object-fit: cover;
+}
+
+figcaption {
+    color: var(--text-color);
+    margin: 10px;
+    text-align: center;
+}
+
+audio {
+    margin: 10px
+}
