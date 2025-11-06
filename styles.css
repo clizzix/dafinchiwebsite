@@ -322,6 +322,9 @@ audio {
 #gallery {
     background: var(--bar-color);
 }
+#gallery h2 {
+    padding-bottom: 20px;
+}
 
 .gallery-container {
     max-width: 800px; 
@@ -379,7 +382,7 @@ audio {
 .dots {
     padding: 10px;
     text-align: center;
-    background-color: #f1f1f1; 
+    background-color: var(--bar-color); 
 }
 
 
@@ -419,9 +422,8 @@ audio {
 
 #gallery .gallery-container img {
     width: 100%;
-    height: auto;
     border-radius: 10px;
-    height: 300px; /* Beispielhöhe, anpassen nach Bedarf */
+    height: 500px; /* Beispielhöhe, anpassen nach Bedarf */
     object-fit: cover; /* Wichtig, um das Seitenverhältnis beizubehalten */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
