@@ -15,7 +15,7 @@
         <navbar class="navbar">
             <ul>
                 <li><a href="#about">About</a></li>
-                <li><a href="#media">Media</a></li>
+                <li><a href="#tracks">Tracks</a></li>
                 <li><a href="#">Gallery</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -41,13 +41,14 @@
             <div class="label-container">
                 <img src="labels/lincor.jpg" alt="Logo of Lincor"/>
                 <img src="labels/soundoptix.jpg" alt="Logo of Soundoptix"/>
-                <img src="labels/mentalschizophrenia.jpg"/>
+                <img src="labels/mentalschizophrenia.jpg" alt="Logo of Mental Schizophrenia"/>
             </div>
         </section>
-        <section id="media">
+        <section id="tracks">
             <h2>Media</h2>
+            <h3>Featured Tracks and latest Releases</h3>
+        <div class="tracks-content">
             <div class="media-parent">
-                <h3>Featured Tracks and latest Releases</h3>
             <div class="media-container">
                 <img src="https://geo-media.beatport.com/image_size/1400x1400/16b2b65a-b150-4559-a5ef-7c7caba88973.jpg"/>
                 <figure>
@@ -69,16 +70,58 @@
                     <audio controls src="audio/Dafinchi - Blooming (Original Mix) [Dog and Man].mp3"></audio>
                 </figure>
             </div>
-            </div>
-        </section>
-        <section class="linktree">
-            <p>For more info and the full track selection click the buttons!</p>
+            <section class="linktree">
             <div class="social-links">
                 <a href="https://www.facebook.com/DJDafinchi/" target="_blank"><img src="Buttons/Facebook.svg"/></a>
                 <a href="https://www.instagram.com/dafinchi_dj/" target="_blank"><img class="insta-button" src="Buttons/Instagram.png"/></a>
                 <a href="https://open.spotify.com/intl-de/artist/2RlbbPRRMRx2ewR219UMCN" target="_blank"><img src="Buttons/Spotify.png"></a>
             </div>
+            </section>
+            </div>
+            </div>
         </section>
+        <section id="gallery">
+                <h2>Gallery</h2>
+            
+        <div class="gallery-container">
+            <div class="slide fade">
+                <img src="events/Bunker.jpg"/>
+            </div>
+            <div class="slide fade">
+                <img src="events/Newcomer.jpg"/>
+            </div>
+        
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <div class="dots" style="text-align: center;">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact-container">
+                <form>
+                    <div class="form">
+                        <label for="name">Name</label>
+                        <input id="name" type="text" name="name" required>
+                    </div>
+                    <div class="form">
+                        <label for="email">Email</label>
+                        <input id="email" type="email" name="email" required>
+                    </div>
+                    <div class="form">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <div class="form-submit">
+                    <button class="form-button" type="mailto:dafinchi.dj@gmail.com">Send</button>
+                    <div>
+                </form>
+            </div>
+            </section>
+
     </main>
     <footer>
     </footer>

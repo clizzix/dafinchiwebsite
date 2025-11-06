@@ -38,6 +38,14 @@ header {
     z-index: 100;
 }
 
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
 h1, h2, h3, h4, h5 {
     color: var(--text-color);
     padding: 15px;
@@ -139,6 +147,10 @@ h1, h2, h3, h4, h5 {
     justify-content: center;
     background: var(--bar-color);
 }
+.collabs img:hover {
+    scale: 1.1;
+    transition: scale 0.3s ease-in-out;
+}
 
 .label-container {
     display: flex;
@@ -157,7 +169,7 @@ h1, h2, h3, h4, h5 {
     object-fit: cover;
     
 }
-#media {
+#tracks {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -172,7 +184,7 @@ h1, h2, h3, h4, h5 {
     padding: 20px;
     text-align: center;
 }
-#media h2 {
+#tracks h2 {
     padding-bottom: 40px;
 }
 
@@ -210,6 +222,13 @@ audio {
     margin: 10px
 }
 
+.tracks-content {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding: 20px;
+}
+
 .linktree {
     display: flex;
     justify-content: center;
@@ -217,6 +236,10 @@ audio {
     padding: 20px;
     flex-wrap: wrap;
     background: var(--bar-color);
+    opacity: 80%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px var(--text-color);
+    margin: 10px;
 }
 
 .social-links {
@@ -294,4 +317,111 @@ audio {
     background: var(--buton-hover-color);
     transition: background 0.3s ease-in-out;
     cursor: pointer;
+}
+
+#gallery {
+    background: var(--bar-color);
+}
+
+.gallery-container {
+    max-width: 800px; 
+    position: relative; 
+    margin: auto; 
+    overflow: hidden; 
+    border: 1px solid #ddd; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+}
+
+.slides {
+    display: flex; 
+    width: 100%; 
+}
+.slide {
+    display: none; 
+    width: 100%; 
+    text-align: center; 
+}
+.slide.active {
+    display: block; 
+}
+.slide img {
+    width: 100%; 
+    height: auto; 
+    vertical-align: middle; 
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+
+.dots {
+    padding: 10px;
+    text-align: center;
+    background-color: #f1f1f1; 
+}
+
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+#gallery .gallery-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    height: 300px; /* Beispielhöhe, anpassen nach Bedarf */
+    object-fit: cover; /* Wichtig, um das Seitenverhältnis beizubehalten */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
